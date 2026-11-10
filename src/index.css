@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-ivory: #FAF8F4;
+    --soft-lavender: #EAE5F4;
+    --muted-lavender: #B8A6D9;
+    --pastel-sage: #C9D8C5;
+    --soft-peach: #F3D9C8;
+    --deep-plum: #302A38;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAF8F4;
+    color: #302A38;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(184, 166, 217, 0.4);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(184, 166, 217, 0.7);
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(234, 229, 244, 0.8);
+  }
+
+  .glass-card-subtle {
+    background: rgba(250, 248, 244, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(234, 229, 244, 0.6);
+  }
+
+  .glass-plum {
+    background: rgba(48, 42, 56, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(184, 166, 217, 0.2);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
